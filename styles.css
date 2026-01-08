@@ -800,8 +800,9 @@ body {
     }
 
     .lane-name {
-        position: static;
-
+        position: absolute;
+        top: -80%;
+        left: 1%;
         display: inline-block;
         margin-bottom: var(--spacing-xs);
         transform: none;
@@ -814,11 +815,30 @@ body {
 
 @media (max-width: 768px) {
     .header {
-        padding: var(--spacing-md);
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .header-content {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+        font-size: clamp(0.75rem, 1.8vw, 0.9rem);
     }
 
     .legend {
-        gap: var(--spacing-sm);
+        gap: var(--spacing-xs);
+        margin-top: var(--spacing-sm);
+    }
+
+    .legend-item {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.7rem;
     }
 
     .lane {
@@ -845,6 +865,32 @@ body {
 }
 
 @media (max-width: 480px) {
+    .header {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .title {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+    }
+
+    .subtitle {
+        font-size: 0.7rem;
+    }
+
+    .legend {
+        gap: 0.4rem;
+    }
+
+    .legend-item {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .badge-demo {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.6rem;
+    }
+
     .lane {
         height: 50px;
     }
