@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Improvement Race Tracker - Racing visualization for team improvement submissions (SS, QCP, QCC)">
+    <title>🏁 Improvement Race Tracker - PT Saptaindra Sejati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="title">🏁 Improvement Race Championship 🏆</h1>
+            <p class="subtitle">Perlombaan Improvement Tim ITI • Mari Berlomba! 🚀</p>
+        </div>
+        <div class="legend">
+            <div class="legend-item">
+                <span class="badge-demo start-demo">START</span>
+                <span>Belum Submit</span>
+            </div>
+            <div class="legend-item">
+                <span class="badge-demo middle-demo">PROGRESS</span>
+                <span>1 Submit</span>
+            </div>
+            <div class="legend-item">
+                <span class="badge-demo finish-demo">FINISH!</span>
+                <span>2 Submit</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Race Track Container -->
+    <main class="race-container">
+        <!-- Start Line -->
+        <div class="start-line-marker">
+            <div class="line-bar"></div>
+            <div class="line-label">START 🚦</div>
+        </div>
+
+        <!-- Finish Line -->
+        <div class="finish-line-marker">
+            <div class="line-bar checkered"></div>
+            <div class="line-label">FINISH 🏁</div>
+        </div>
+
+        <!-- Racing Lanes (dynamically populated) -->
+        <div id="racing-lanes" class="racing-lanes"></div>
+    </main>
+
+    <!-- Stats Footer -->
+    <footer class="stats-footer">
+        <div class="stat-card">
+            <div class="stat-icon">🏃</div>
+            <div class="stat-number" id="total-racers">0</div>
+            <div class="stat-label">Total Racers</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <div class="stat-number" id="total-submissions">0</div>
+            <div class="stat-label">Total Submissions</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number" id="finished-racers">0</div>
+            <div class="stat-label">Winners!</div>
+        </div>
+    </footer>
+
+    <!-- Modal Popup for Character Details -->
+    <div id="character-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <img id="modal-avatar" src="" alt="" class="modal-avatar">
+                <div class="modal-title-section">
+                    <h2 id="modal-name" class="modal-name"></h2>
+                    <div class="modal-progress-badge" id="modal-badge"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3 class="submissions-title">📋 Submissions</h3>
+                <div id="modal-submissions" class="submissions-list"></div>
+                <div id="no-submissions" class="no-submissions" style="display: none;">
+                    <p>Belum ada submission. Ayo semangat! 💪</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="decorations">
+        <div class="cloud cloud1">☁️</div>
+        <div class="cloud cloud2">🌳</div>
+        <div class="cloud cloud3">🌴</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

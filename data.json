@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nama": "Didin",
+    "avatar": "assets/char1.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 2,
+    "nama": "Aji",
+    "avatar": "assets/char2.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 3,
+    "nama": "Annas",
+    "avatar": "assets/char3.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 4,
+    "nama": "Attaf",
+    "avatar": "assets/char4.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 5,
+    "nama": "Dwi",
+    "avatar": "assets/char5.png",
+    "points": 1,
+    "submissions": [
+      {
+        "judul": "Database Kontrak NOI",
+        "jenis": "SS"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nama": "Edi",
+    "avatar": "assets/char6.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 7,
+    "nama": "Irfan",
+    "avatar": "assets/char7.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 8,
+    "nama": "Ius",
+    "avatar": "assets/char8.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 9,
+    "nama": "Rizky",
+    "avatar": "assets/char9.png",
+    "points": 0,
+    "submissions": []
+  },
+  {
+    "id": 10,
+    "nama": "Risma",
+    "avatar": "assets/char10.png",
+    "points": 0,
+    "submissions": []
+  }
+]
