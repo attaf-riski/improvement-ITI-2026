@@ -30,7 +30,7 @@
   {
     "id": 5,
     "nama": "Dwi",
-    "avatar": "assets/char5.png",
+    "avatar": "assets/char5.jpg",
     "points": 1,
     "submissions": [
       {
@@ -42,21 +42,7 @@
   {
     "id": 6,
     "nama": "Edi",
-    "avatar": "assets/char6.png",
-    "points": 0,
-    "submissions": []
-  },
-  {
-    "id": 7,
-    "nama": "Irfan",
-    "avatar": "assets/char7.png",
-    "points": 0,
-    "submissions": []
-  },
-  {
-    "id": 8,
-    "nama": "Ius",
-    "avatar": "assets/char8.png",
+    "avatar": "assets/char6.jpg",
     "points": 0,
     "submissions": []
   },
@@ -64,13 +50,6 @@
     "id": 9,
     "nama": "Rizky",
     "avatar": "assets/char9.png",
-    "points": 0,
-    "submissions": []
-  },
-  {
-    "id": 10,
-    "nama": "Risma",
-    "avatar": "assets/char10.png",
     "points": 0,
     "submissions": []
   }

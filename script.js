@@ -10,7 +10,7 @@ const CONFIG = {
     // Horizontal positioning parameters (left to right)
     startPosition: 5,     // 5% from left (near start line)
     endPosition: 90,      // 90% from left (at finish line)
-    maxPoints: 2,         // Maximum submissions to reach finish line
+    maxPoints: 4,         // Maximum submissions to reach finish line
 
     // Animation delays
     characterAnimationDelay: 80, // ms between each racer appearance
