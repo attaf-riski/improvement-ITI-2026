@@ -168,8 +168,196 @@ body {
 }
 
 /* ========================================
+   SPECTATOR BENCHES
+   ======================================== */
+.spectator-section {
+    padding: var(--spacing-md) var(--spacing-md) 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.spectator-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe5ec 100%);
+    border-radius: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
+}
+
+.spectator-bench {
+    display: flex;
+    gap: var(--spacing-md);
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ebf0 100%);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 20px 20px 0 0;
+    box-shadow: var(--shadow-md);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+}
+
+.spectator-seat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    background: white;
+    border-radius: 15px;
+    transition: all var(--transition-normal);
+}
+
+.spectator-seat:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-colorful);
+}
+
+.spectator-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-md);
+    animation: spectatorCheer 3s ease-in-out infinite;
+    transition: all var(--transition-normal);
+}
+
+.spectator-seat:hover .spectator-photo {
+    border-color: var(--success-color);
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.6);
+}
+
+.spectator-seat:nth-child(1) .spectator-photo {
+    animation-delay: 0s;
+}
+
+.spectator-seat:nth-child(2) .spectator-photo {
+    animation-delay: 1s;
+}
+
+.spectator-seat:nth-child(3) .spectator-photo {
+    animation-delay: 2s;
+}
+
+@keyframes spectatorCheer {
+
+    0%,
+    90%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    93% {
+        transform: rotate(-10deg) scale(1.1);
+    }
+
+    96% {
+        transform: rotate(10deg) scale(1.1);
+    }
+}
+
+.spectator-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* Confetti Effects */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 5;
+}
+
+.confetti {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 80px;
+    animation: confettiFall 4s ease-in infinite;
+    opacity: 0;
+}
+
+/* Position each confetti piece */
+.confetti-1 {
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.confetti-2 {
+    left: 45%;
+    animation-delay: 0.5s;
+}
+
+.confetti-3 {
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.confetti-4 {
+    left: 35%;
+    animation-delay: 1.5s;
+}
+
+.confetti-5 {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.confetti-6 {
+    left: 55%;
+    animation-delay: 2.5s;
+}
+
+.confetti-7 {
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.confetti-8 {
+    left: 65%;
+    animation-delay: 3.5s;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(150px) rotate(720deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* ========================================
    RACE CONTAINER - MULTI-LANE LAYOUT
    ======================================== */
+
 .race-container {
     padding: var(--spacing-xl) var(--spacing-md);
     max-width: 1400px;
@@ -811,6 +999,24 @@ body {
     .lane {
         margin-top: 35px;
     }
+
+    .spectator-bench {
+        gap: var(--spacing-sm);
+        padding: 0.75rem var(--spacing-sm);
+    }
+
+    .spectator-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .spectator-name {
+        font-size: 0.75rem;
+    }
+
+    .spectator-title {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -862,6 +1068,19 @@ body {
     .modal-content {
         padding: var(--spacing-lg);
     }
+
+    .spectator-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .spectator-name {
+        font-size: 0.75rem;
+    }
+
+    .spectator-title {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -902,5 +1121,32 @@ body {
 
     .stats-footer {
         gap: var(--spacing-sm);
+    }
+
+    .spectator-bench {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .spectator-photo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .spectator-name {
+        font-size: 0.65rem;
+    }
+
+    .spectator-title {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .spectator-seat {
+        padding: 0.25rem;
+    }
+
+    .confetti {
+        font-size: 1rem;
     }
 }
